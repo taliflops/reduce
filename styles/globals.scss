@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;500&display=swap');
+
+@keyframes yolo {
+  from {
+    transform: rotate(-180deg) scale(.7);
+    opacity: .3;
+  }
+  
+  to {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #f8f8f8;
+  * {
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.area {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  > svg {
+    height: 5vh;
+    margin: 3vh auto 0;
+  }
+  a {
+    font-family: 'Roboto Mono', monospace;
+    width: 50vw;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 20vh;
+    height: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(-6vw);
+    color: #9f9f9f;
+    font-size: 2vw;
+    margin: 0 auto;
+    &:hover {
+      color: #009EFF;
+    }
+  }
+  > a {
+    margin: 1vh auto;
+    padding: 2vw 4vw;
+    font-size: 3vw;
+    color: #009EFF;
+    background-color: #ffffff;
+  }
+  p {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    width: 65vw;
+    margin: 2vh auto 1vw;
+    font-size: 3vw;
+  }
+  > p {
+    margin: 1vh auto;
+    font-size: 2vw;
+    color: #F37C30;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 30vh auto 0 auto;
+  transform: translateY(-1vw);
+  input[type="url"] {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+    height: 6vw;
+    overflow-x: hidden;
+    background-color: black;
+    border: none;
+    border-radius: 20vh;
+    padding: 2vw 4vw;
+    width: 50vw;
+    font-size: 3vw;
+    color: white;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: #ababab;
+      opacity: 1;
+    }
+  }
+  > svg {
+    width: 14vw;
+    height: 14vw;
+    margin: -2vw -5.8vw;
+  }
+  button {
+    background-color: black;
+    border: none;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 20vh;
+    svg {
+      width: 6vw;
+      height: 6vw;
+      padding-top: .5vw;
+      animation: yolo .2s ease-in-out 1;
+      // &:hover {
+        // transform:translateX(.4vw);
+      // }
+    }
+  }
+}
